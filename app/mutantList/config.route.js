@@ -10,7 +10,9 @@
   function configFunction($stateProvider) {
     $stateProvider.state('mutantList', {
       url: '/mutantlist',
-      templateUrl: 'app/mutantList/mutantList.html'
+      templateUrl: 'app/mutantList/mutantList.html',
+      controller: 'MutantListController',
+      controllerAs: 'vm',
     });
   }
 })();
