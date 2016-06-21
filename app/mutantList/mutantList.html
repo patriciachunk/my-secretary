@@ -31,8 +31,8 @@
         <td>{{ mutant.name }}</td>
         <td>{{ mutant.phone }}</td>
         <td>{{ mutant.topic }}</td>
-        <td>{{ mutant.notified }}</td>
-        <td>{{ mutant.complete }}</td>
+        <td>{{ mutant.notified ? 'Yes' : 'No'}}</td>
+        <td><input type="checkbox" ng-model="mutant.complete"></td>
         <td>
           <button class="button success">Text</button>
           <button class="button alert">Delete</button>
