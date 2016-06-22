@@ -3,11 +3,11 @@
 
   angular
     .module('mutantApp.auth')
-    .controller('AthController', AuthController);
+    .controller('AuthController', AuthController);
 
     AuthController.$inject = ['$firebaseAuth'];
 
-    fucntion AuthController() {
+    function AuthController($firebaseAuth) {
       var vm = this;
       var auth = $firebaseAuth();
 
@@ -19,7 +19,13 @@
       }
 
       function register(user) {
-        return auth.$createUserWithEmailandPassword(user.email, user.password);
+        return auth.$createUserWithEmailandPassword(user.email, user.password)
+          .then(function(user) {
+            console.log(user);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
       }
     }
 })
