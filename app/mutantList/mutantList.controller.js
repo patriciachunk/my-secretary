@@ -5,9 +5,9 @@
     .module('mutantApp.mutantList')
     .controller('MutantListController', MutantListController);
 
-    MutantListController.$inject = ['mutantService', 'firebaseDataService'];
+    MutantListController.$inject = ['mutantService', 'textMessageService'];
 
-    function MutantListController(mutantService, firebaseDataService) {
+    function MutantListController(mutantService, textMessageService) {
       var vm = this;
 
 
@@ -32,18 +32,7 @@
       }
 
       function sendText(mutant) {
-        // build text object
-        var newText = {
-          name: mutant.name,
-          topic: mutant.topic,
-          phoneNumber: mutant.phone
-        };
-        // save text to firebase
-        firebaseDataService.texts.push(newText);
-        // change notified to true
-        mutant.notified = true;
-        // save mutant
-        vm.mutants.$save(mutant);
+        textMessageService.sendText(mutant, vm.mutants);
       }
     }
 })();
