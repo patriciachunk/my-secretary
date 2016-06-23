@@ -7,8 +7,21 @@
 
 
     function mutantService() {
-      var service = {};
+      var service = {
+        Mutant: Mutant,
+      };
 
       return service;
+
+      //////////////////////////////
+
+      function Mutant() {
+        this.name = '';
+        this.phone = '';
+        this.topic = '';
+        this.notified = false;
+        this.complete = false;
+      }
+
     }
 })();
