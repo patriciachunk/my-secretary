@@ -12,6 +12,8 @@
       var auth = $firebaseAuth();
 
       vm.register = register;
+      vm.login = login;
+      vm.logout = logout;
 
       vm.user = {
         email: '',
@@ -19,13 +21,28 @@
       }
 
       function register(user) {
-        return auth.$createUserWithEmailandPassword(user.email, user.password)
-          .then(function(user) {
-            console.log(user);
+        return auth.$createUserWithEmailAndPassword(user.email, user.password)
+          .then(function() {
+            vm.login(user);
           })
           .catch(function(error) {
             console.log(error);
           });
       }
+
+      function login(user) {
+        return auth.$signInWithEmailAndPassword(user.email, user.passward)
+        .then(function(user) {
+          $state.go('mutantList');
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      }
+
+      function logout() {
+        auth.$signOut();
+        $state.go('home');
+      }
     }
-})
+})();
