@@ -12,6 +12,7 @@
         root: root,
         texts: root.child('texts'),
         mutants: root.child('mutants'),
+        users: root.child('users'),
       };
 
       return service;
