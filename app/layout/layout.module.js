@@ -2,6 +2,6 @@
   'user strict';
 
   angular
-    .module('mutantapp.layout', []);
+    .module('mutantApp.layout', []);
 
 })();
