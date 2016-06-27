@@ -10,7 +10,6 @@
     function MutantListController(mutantService, textMessageService, user) {
       var vm = this;
 
-
       vm.addMutant = addMutant;
       vm.mutants = mutantService.mutantsByUser(user.uid);
       vm.newMutant = new mutantService.Mutant();

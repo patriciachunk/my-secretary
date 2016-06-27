@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.home', [])
+    .module('mutantApp.home')
     .config(configFunction);
 
 
@@ -12,7 +12,7 @@
       $stateProvider.state('home', {
         url: '/',
         templateUrl: 'app/home/home.html'
-      
+
       });
     }
 })();

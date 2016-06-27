@@ -10,7 +10,6 @@
     function AuthController($state, authService) {
       var vm = this;
 
-
       vm.register = register;
       vm.login = login;
       vm.logout = logout;

@@ -18,7 +18,7 @@
         url: '/login',
         templateUrl: 'app/auth/login.html',
         controller: 'AuthController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
       });
     }
 })();
