@@ -8,19 +8,7 @@
 </head>
 <body>
 
-  <div ng-controller="AuthController as vm" class="top-bar" id="main-menu">
-       <div class="top-bar-left">
-         <ul class="dropdown menu" data-dropdown-menu>
-           <li><a ui-sref="home" class="menu-text">Mutant School</a></li>
-         </ul>
-       </div>
-       <div class="top-bar-right">
-         <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-           <li><a ui-sref="login" ng-show="!vm.isLoggedIn()">Log in</a></li>
-           <li><a href="#" ng-click="vm.logout()" ng-show="vm.isLoggedIn()">Log out</a></li>
-         </ul>
-       </div>
-     </div>
+   <xt-navbar></xt-navbar>
 
 
 
@@ -56,6 +44,7 @@
 
   <!-- Layout module -->
   <script src="app/layout/layout.module.js"></script>
+  <script src="app/layout/navbar.directive.js"></script>
 
   <!-- mutantList module -->
   <script src="app/mutantList/mutantList.module.js"></script>
