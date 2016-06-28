@@ -12,6 +12,7 @@
 
       vm.register = register;
       vm.login = login;
+      vm.error = null;
 
 
       vm.user = {
@@ -29,7 +30,7 @@
             return authService.sendWelcomeEmail(user.email);
           })
           .catch(function(error) {
-            console.log(error);
+            vm.error = error;
           });
       }
 
@@ -42,7 +43,7 @@
 
         })
         .catch(function(error) {
-          console.log(error);
+          vm.error = error;
         });
       }
 
