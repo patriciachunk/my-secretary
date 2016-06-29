@@ -37,10 +37,7 @@
       function login(user) {
         return authService.login(user)
         .then(function(user) {
-          console.log("logined");
           $state.go('mutantList');
-
-
         })
         .catch(function(error) {
           vm.error = error;

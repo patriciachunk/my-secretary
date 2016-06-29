@@ -7,11 +7,11 @@
 
   function xtMutantForm() {
     return {
-      templateUrl: 'app/mutantList/directive/mutantForm.html',
+      templateUrl: 'app/mutantList/directives/mutantForm.html',
       restrict: 'E',
       controller: MutantFormController,
       controllerAs: 'vm',
-      bindTocontroller: true,
+      bindToController: true,
       scope: {
         mutants: '=',
       },
@@ -24,7 +24,7 @@
     var vm = this;
 
     vm.addMutant = addMutant;
-    vm.newMutant = new MutantService.Mutant();
+    vm.newMutant = new mutantService.Mutant();
 
     function addMutant() {
        vm.mutants.$add(vm.newMutant);

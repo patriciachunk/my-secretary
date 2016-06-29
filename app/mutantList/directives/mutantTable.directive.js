@@ -11,7 +11,7 @@
         restrict: 'E',
         controller: MutantTableController,
         controllerAs: 'vm',
-        bindTocontroller: true,
+        bindToController: true,
         scope: {
           mutants: '=',
         },
