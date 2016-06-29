@@ -1,14 +1,38 @@
 <div class="medium-6 medium-centered large-4 large-centered columns">
 
-<form ng-submit="vm.register(vm.user)">
+<form ng-submit="authForm.$valid && vm.register(vm.user)" name="authForm" novalidate>
      <div class="column log-in-form">
        <h4 class="text-center">Sign up</h4>
+
+       <!-- Server Authentication Errors -->
+         <div class="callout small alert" ng-show="vm.error" ng-bind="vm.error">
+         </div>
+
        <label>Email
-         <input ng-model="vm.user.email" type="email" placeholder="somebody@example.com" required autofocus>
+         <input
+             ng-model="vm.user.email"
+             type="email"
+             name="email"
+             placeholder="somebody@example.com"
+             ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 750, 'blur': 0 } }"
+             required autofocus>
        </label>
+       <!-- Email errors -->
+         <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.required">
+           Email can't be blank
+         </div>
+         <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.email">
+           Email is formatted incorrectly
+         </div>
        <label>Password
-         <input ng-model="vm.user.password" type="password" placeholder="Password" required>
+         <input ng-model="vm.user.password" type="password" name="password" placeholder="Password" required>
        </label>
+
+       <!-- Password errors -->
+        <div class="callout small alert" ng-show="authForm.$submitted && authForm.password.$error.required">
+          Password can't be blank
+        </div>
+
        <p><button type="submit" class="button expanded">Sign up</button></p>
      </div>
    </form>
