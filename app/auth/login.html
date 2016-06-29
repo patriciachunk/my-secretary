@@ -18,10 +18,18 @@
       <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.required">
         Email can't be blank
       </div>
+      <div class="callout small alert" ng-show="authForm.$submitted && authForm.email.$error.email">
+           Email is formatted incorrectly
+      </div>
 
        <label>Password
          <input ng-model="vm.user.password" name="password" type="password" name="password" placeholder="Password" required>
        </label>
+
+       <!-- Password errors -->
+         <div class="callout small alert" ng-show="authForm.$submitted && authForm.password.$error.required">
+           Password can't be blank
+         </div>
        <p><button type="submit" class="button expanded">Log in</button></p>
      </div>
    </form>
