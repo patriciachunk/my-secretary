@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('mutantApp.core')
+    .module('mySecretary.core')
     .factory('sendEmailService', sendEmailService);
 })();

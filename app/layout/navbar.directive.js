@@ -2,7 +2,7 @@
    'use strict';
 
    angular
-     .module('mutantApp.layout')
+     .module('mySecretary.layout')
      .directive('xtNavbar', xtNavbar);
 
    function xtNavbar() {

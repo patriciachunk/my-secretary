@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.core')
+    .module('mySecretary.core')
     .factory('textMessageService', textMessageService);
 
     textMessageService.$inject = ['firebaseDataService'];
@@ -16,15 +16,15 @@
 
     /////////////////////////////
 
-    function sendText(mutant, mutants) {
+    function sendText(todo, todos) {
        var newText = {
-         name: mutant.name,
-         topic: mutant.topic,
-         phoneNumber: mutant.phone
+         name: todo.name,
+         topic: todo.topic,
+         phoneNumber: todo.phone
        };
        firebaseDataService.texts.push(newText);
-       mutant.notified = true;
-       mutants.$save(mutant);
+       todo.notified = true;
+       todos.$save(todo);
      }
   }
 })();

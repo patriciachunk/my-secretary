@@ -1,0 +1,28 @@
+<div class="small-12 columns">
+  <table class="hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Topic</th>
+        <th>Notified</th>
+        <th>Complete</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="todo in vm.todos">
+        <td>{{ todo.name }}</td>
+        <td>{{ todo.phone }}</td>
+        <td>{{ todo.topic }}</td>
+        <td>{{ todo.notified ? 'Yes' : 'No'}}</td>
+        <td><input type="checkbox" ng-model="todo.complete" ng-change="vm.toggleComplete(todo)"></td>
+        <td>
+          <button ng-click="vm.sendText(todo)" class="button success">Text</button>
+
+          <button ng-click="vm.deletetodo(todo)" class="button alert">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

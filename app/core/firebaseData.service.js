@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.core')
+    .module('mySecretary.core')
     .factory('firebaseDataService', firebaseDataService);
 
     function firebaseDataService() {
@@ -11,7 +11,7 @@
       var service = {
         root: root,
         texts: root.child('texts'),
-        mutants: root.child('mutants'),
+        todos: root.child('todos'),
         users: root.child('users'),
         emails: root.child('emails'),
       };

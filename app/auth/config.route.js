@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.auth')
+    .module('mySecretary.auth')
     .config(configFunction);
 
     configFunction.$inject = ['$stateProvider'];

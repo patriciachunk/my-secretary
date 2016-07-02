@@ -1,18 +1,18 @@
 (function() {
   'use strict';
 
-  angular.module('mutantApp', [
+  angular.module('mySecretary', [
     //Angular modules
     'ui.router',
     //Third-party modules
     'firebase',
 
     //Custon modules
-    'mutantApp.home',
-    'mutantApp.mutantList',
-    'mutantApp.auth',
-    'mutantApp.core',
-    'mutantApp.layout',
+    'mySecretary.home',
+    'mySecretary.todoList',
+    'mySecretary.auth',
+    'mySecretary.core',
+    'mySecretary.layout',
   ])
   .config(configFunction)
   .run(runFunction);

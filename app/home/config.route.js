@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.home')
+    .module('mySecretary.home')
     .config(configFunction);
 
 

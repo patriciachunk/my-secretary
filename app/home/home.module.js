@@ -1,5 +1,5 @@
 (function() {
   'use strict';
 
-  angular.module('mutantApp.home', []);
+  angular.module('mySecretary.home', []);
 })();

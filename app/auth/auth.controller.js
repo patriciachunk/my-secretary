@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('mutantApp.auth')
+    .module('mySecretary.auth')
     .controller('AuthController', AuthController);
 
     AuthController.$inject = ['$state', 'authService'];
@@ -37,7 +37,7 @@
       function login(user) {
         return authService.login(user)
         .then(function(user) {
-          $state.go('mutantList');
+          $state.go('todoList');
         })
         .catch(function(error) {
           vm.error = error;

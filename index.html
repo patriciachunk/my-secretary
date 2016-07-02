@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="mutantApp">
+<html ng-app="mySecretary">
 <head>
   <meta charset="utf-8">
-  <title>Mutant Office Hours</title>
+  <title>My Secretary</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
   <link rel="stylesheet" href="app/content/css/app.css">
 </head>
@@ -34,7 +34,7 @@
 
   <!-- Core module -->
   <script src="app/core/core.module.js"></script>
-  <script src="app/core/mutant.service.js"></script>
+  <script src="app/core/todo.service.js"></script>
   <script src="app/core/firebaseData.service.js"></script>
   <script src="app/core/textMessage.service.js"></script>
 
@@ -46,12 +46,12 @@
   <script src="app/layout/layout.module.js"></script>
   <script src="app/layout/navbar.directive.js"></script>
 
-  <!-- mutantList module -->
-  <script src="app/mutantList/mutantList.module.js"></script>
-  <script src="app/mutantList/config.route.js"></script>
-  <script src="app/mutantList/mutantList.controller.js"></script>
-  <script src="app/mutantList/directives/mutantForm.directive.js"></script>
-  <script src="app/mutantList/directives/mutantTable.directive.js"></script>
+  <!-- todoList module -->
+  <script src="app/todoList/todoList.module.js"></script>
+  <script src="app/todoList/config.route.js"></script>
+  <script src="app/todoList/todoList.controller.js"></script>
+  <script src="app/todoList/directives/todoForm.directive.js"></script>
+  <script src="app/todoList/directives/todoTable.directive.js"></script>
 
   <!-- Firebase app config -->
   <script src="app/firebase.config.js"></script>

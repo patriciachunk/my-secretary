@@ -2,12 +2,12 @@
    'use strict';
 
    angular
-     .module('mutantApp.auth')
+     .module('mySecretary.auth')
      .factory('authService', authService);
 
-   authService.$inject = ['$firebaseAuth', 'firebaseDataService', 'mutantService'];
+   authService.$inject = ['$firebaseAuth', 'firebaseDataService', 'todoService'];
 
-   function authService($firebaseAuth, firebaseDataService, mutantService) {
+   function authService($firebaseAuth, firebaseDataService, todoService) {
      var auth = $firebaseAuth();
 
      var service = {
@@ -32,7 +32,7 @@
      }
 
      function logout() {
-       mutantService.reset();
+       todoService.reset();
        auth.$signOut();
      }
      function isLoggedIn() {
